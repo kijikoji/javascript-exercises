@@ -1,12 +1,23 @@
-const removeFromArray = function(array, toBeRemoved) {
+const removeFromArray = function (array) {
+    toBeRemoved = Array.prototype.slice.call(arguments, 1);
     newArray = [];
-    for(i = 0; i < array.length; i++){
-        if(array[i] != toBeRemoved){
-            newArray.push(array[i]);
+
+    for (i = 0; i < array.length; i++) {
+      remove = false;
+
+      for (item in toBeRemoved) {
+        if (array[i] == toBeRemoved[item]) {
+          remove = true;
         }
+      }
+
+      if (!remove) {
+        newArray.push(array[i]);
+      }
     }
+    
     return newArray;
-};
+  };
 
 // Do not edit below this line
 module.exports = removeFromArray;
