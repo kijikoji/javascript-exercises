@@ -1,5 +1,5 @@
 const sumAll = function (num1, num2) {
-    if (num1 < 0 || num2 < 0 || num1 % 1 || num2 % 1) {
+    if (num1 < 0 || num2 < 0 || num1 % 1 || num2 % 1 || typeof(num1) != "number" || typeof(num2) != "number") {
         return 'ERROR';
     }
     total = 0;
