@@ -6,7 +6,9 @@ const sum = (array) => array.reduce((sum, item) => {
   return sum += item
 }, 0);
 
-const multiply = (a, b) => a * b;
+const multiply = (array) => array.reduce((sum, item) => {
+  return sum *= item
+}, 1);
 
 const power = (a, b) => Math.pow(a, b);
 
