@@ -2,7 +2,9 @@ const add = (a, b) => a + b;
 
 const subtract = (a, b) => a - b;
 
-const sum = (a, b) => a / b;
+const sum = (array) => array.reduce((sum, item) => {
+  return sum += item
+}, 0);
 
 const multiply = (a, b) => a * b;
 
