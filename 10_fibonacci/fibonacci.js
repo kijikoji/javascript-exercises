@@ -1,5 +1,7 @@
 const fibonacci = function(pos) {
-    if (pos == 1) {
+    if (pos < 0) {
+        return "OOPS";
+    } else if (pos == 1) {
         return 1;
     } else {
         --pos;
