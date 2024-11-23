@@ -1,5 +1,8 @@
 const findTheOldest = function(array) {
     const oldest = array.reduce((older, people) => {
+        if (!people.yearOfDeath) {
+            people.yearOfDeath = new Date().getFullYear();
+        };
         const olderAge = older.yearOfDeath - older.yearOfBirth
         const peopleAge = people.yearOfDeath - people.yearOfBirth
         console.log("----------");
